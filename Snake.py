@@ -28,6 +28,8 @@ def move():
     """Move snake forward one segment."""
     head = snake[-1].copy()
     head.move(aim)
+    
+    # Mueve a la comida al azar 1 paso a la vez
     movimientos = [vector(10,0),vector(-10,0),vector(0,10),vector(0,-10)]
     foodmove = choice(movimientos)
     food.move(foodmove)
@@ -37,6 +39,7 @@ def move():
         update()
         return
     
+    # La comida no se sale de la pantalla
     if not inside(food):
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
