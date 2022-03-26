@@ -6,10 +6,10 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-colors = ['black', 'yellow', 'pink', 'purple', 'blue']
-randcolor = choice(colors)
-colors2 =['green', 'grey', 'brown', 'orange', 'aqua']
-randcolor2 = choice(colors2)
+colors = ['black', 'yellow', 'pink', 'purple', 'blue'] # Podrá escoger entre estos 5 colores para la víbora. 
+randcolor = choice(colors) # Escogerá entre esos 5 colores en cada partida.
+colors2 =['green', 'grey', 'brown', 'orange', 'aqua'] # Podrá escoger entre estos 5 colores para la comida.
+randcolor2 = choice(colors2) #  Escogerá entre esos 5 colores en cada partida.
 
 
 def change(x, y):
@@ -47,9 +47,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'randcolor')
+        square(body.x, body.y, 9, 'randcolor') # Asignará un color a la víbora
 
-    square(food.x, food.y, 9, 'randcolor2')
+    square(food.x, food.y, 9, 'randcolor2') # Asignará un color a la comida
     update()
     ontimer(move, 100)
 
