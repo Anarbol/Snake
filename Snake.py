@@ -47,9 +47,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'randcolor') # Asignará un color a la víbora
+        square(body.x, body.y, 9, randcolor) # Asignará un color a la víbora
 
-    square(food.x, food.y, 9, 'randcolor2') # Asignará un color a la comida
+    square(food.x, food.y, 9, randcolor2) # Asignará un color a la comida
     update()
     ontimer(move, 100)
 
